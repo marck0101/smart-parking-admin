@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Components/Home/Home";
 import ChartBar from "./Pages/Components/ChartBar";
@@ -10,6 +11,7 @@ import RelatorioSemana from "./Pages/Components/Relatorios/Dia";
 import RelatorioMes from "./Pages/Components/Relatorios/Dia";
 import RelatorioSemestre from "./Pages/Components/Relatorios/Dia";
 import NovoRelatorio from "./Pages/Components/NewRelatorio";
+import Home2 from "./Pages/Components/Home/Home2";
 
 function RoutesApp() {
   return (
@@ -22,8 +24,9 @@ function RoutesApp() {
         <Route path="/chartline" element={<ChartLine />} />
         <Route path="/relatorios" element={<Relatorios />} />
         <Route path="/relatorios/:id" element={<Relatorios />} />
-        <Route path="/cadastroRelatorios" element={<NovoRelatorio />} />
+        {/* <MuiLink to={`/relatorios/${item.id}`}> */}
 
+        <Route path="/cadastroRelatorios" element={<NovoRelatorio />} />
 
         <Route path="/relatorioDia" element={<RelatorioDia />} />
         <Route path="/relatorioSemana" element={<RelatorioSemana />} />
