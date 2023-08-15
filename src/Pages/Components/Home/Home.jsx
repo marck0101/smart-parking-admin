@@ -7,6 +7,10 @@ import { Link } from "react-router-dom";
 import "../Home/style.css";
 
 export default function Home() {
+
+  // const api = "http://192.168.123.196/parkingDetector/";
+  // const [imagemRealTime, setImagemRealTime] = React.useState([]);
+
   return (
     <>
       <Grid container spacing={2} style={{padding: 15}}>
@@ -20,6 +24,11 @@ export default function Home() {
                   <Grid className="center1">
                     {item.dadosAPI ? (
                       <div>{item.dadosAPI}</div>
+                    //   <img
+                    //   src={`data:image/png;base64,${imagemRealTime}`}
+                    //   height="400"
+                    //   width="800"
+                    // />
                     ) : (
                       <img
                         src={item.imagemCaminho}
