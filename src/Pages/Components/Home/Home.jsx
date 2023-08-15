@@ -9,24 +9,22 @@ import "../Home/style.css";
 export default function Home() {
   return (
     <>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} style={{padding: 15}}>
         {info.cardsHome.map((item, index) => (
-          <Grid key={item.id} item xs={12} lg={6}>
+          <Grid key={item.id} item xs={12} lg={6} >
             <Tooltip title={item.tooltip}>
               <Card>
                 <br />
                 <h3>{item.title}</h3> <br />
                 <Link to={`/relatorios/${item.id}`}>
-                  {" "}
-                  {/* Alteração aqui */}
                   <Grid className="center1">
                     {item.dadosAPI ? (
                       <div>{item.dadosAPI}</div>
                     ) : (
                       <img
                         src={item.imagemCaminho}
-                        height="200"
-                        width="400"
+                        height="250"
+                        width="450"
                         alt={item.title}
                       />
                     )}
